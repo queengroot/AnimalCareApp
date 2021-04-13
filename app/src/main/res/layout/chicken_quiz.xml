@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFF66"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:cardBackgroundColor="#FFFF66">
+
+            <TextView
+                android:id="@+id/titleKnowledge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/quicksand_medium"
+                android:paddingLeft="25sp"
+                android:text="Test your knowledge!"
+                android:textColor="@color/purple_777"
+                android:textSize="36sp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#1fbccf"
+            app:cardBackgroundColor="#FFFF66">
+
+            <TextView
+                android:id="@+id/questionOneText"
+                android:layout_width="wrap_content"
+                android:layout_height="121dp"
+                android:paddingLeft="10sp"
+                android:text="1. What do you call a female chicken under one year of age?"
+                android:textColor="@color/purple_777"
+                android:textSize="30sp" />
+
+            <EditText
+                android:id="@+id/editTextAnswer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:paddingTop="200sp"
+                android:text="Enter answer"
+                android:textColor="@color/purple_777" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="181dp"
+            android:background="#1fbccf"
+            app:cardBackgroundColor="#FFFF66">
+
+            <TextView
+                android:id="@+id/questionTwoText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10sp"
+                android:text="2. Hens roll in dirt to clean themselves."
+                android:textColor="@color/purple_777"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/buttonTrueTwoChicken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="100dp"
+                android:onClick="chickenQuizTrue"
+                android:text="True" />
+
+            <Button
+                android:id="@+id/buttonFalseTwoChicken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="250dp"
+                android:layout_marginTop="100dp"
+                android:onClick="chickenQuizFalse"
+                android:text="False" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="173dp"
+            android:background="#1fbccf"
+            app:cardBackgroundColor="#FFFF66">
+
+            <TextView
+                android:id="@+id/questionThreeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10sp"
+                android:text="3. A chicken can make 30 different calls."
+                android:textColor="@color/purple_777"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/buttonTrueThreeChicken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="100dp"
+                android:onClick="chickenQuizTrue"
+                android:text="True" />
+
+            <Button
+                android:id="@+id/buttonFalseThreeChicken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="250dp"
+                android:layout_marginTop="100dp"
+                android:onClick="chickenQuizFalse"
+                android:text="False" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="195dp"
+            android:background="#1fbccf"
+            app:cardBackgroundColor="#FFFF66">
+
+            <RadioButton
+                android:id="@+id/radioButtonFiveThousand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="300sp"
+                android:layout_marginTop="100sp"
+                android:text="77"
+                android:textColor="@color/purple_777" />
+
+            <RadioButton
+                android:id="@+id/radioButtonTwelve"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="210sp"
+                android:layout_marginTop="100sp"
+                android:onClick="onRadioButtonClicked"
+                android:text="90"
+                android:textColor="@color/purple_777" />
+
+            <RadioButton
+                android:id="@+id/radioButtonThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="110sp"
+                android:layout_marginTop="100sp"
+                android:text="800"
+                android:textColor="@color/purple_777" />
+
+            <RadioButton
+                android:id="@+id/radioButtonOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100sp"
+                android:text="530"
+                android:textColor="@color/purple_777" />
+
+            <TextView
+                android:id="@+id/questionFourText"
+                android:layout_width="wrap_content"
+                android:layout_height="135dp"
+                android:paddingLeft="10sp"
+                android:text="4. How many eggs does the average hen lay in her egg laying lifetime?"
+                android:textColor="@color/purple_777"
+                android:textSize="30sp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#1fbccf"
+            app:cardBackgroundColor="#FFFF66">
+
+            <TextView
+                android:id="@+id/questionFiveText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10sp"
+                android:text="5. Chickens are herbivores."
+                android:textColor="@color/purple_777"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/buttonTrueFourChicken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="100dp"
+                android:onClick="chickenQuizTrue"
+                android:text="True" />
+
+            <Button
+                android:id="@+id/buttonFalseFourChicken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="250dp"
+                android:layout_marginTop="100dp"
+                android:onClick="chickenQuizFalse"
+                android:text="False" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#1fbccf"
+            app:cardBackgroundColor="#FFFF66">
+
+            <Button
+                android:id="@+id/buttonQuizResults"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:layout_marginTop="20sp"
+                android:onClick="quizResultsChicken"
+                android:text="Submit Quiz" />
+
+            <Button
+                android:id="@+id/homeButtonChicken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="250sp"
+                android:layout_marginTop="25sp"
+                android:onClick="loadHomePageChicken"
+                android:text="Back" />
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>

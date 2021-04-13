@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1fbccf"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+            app:cardBackgroundColor="#FFFF66">
+
+            <TextView
+                android:id="@+id/titleKnowledge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/quicksand_medium"
+                android:paddingLeft="25sp"
+                android:text="Test your knowledge!"
+                android:textColor="@color/purple_777"
+                android:textSize="36sp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="211dp"
+            android:background="#1fbccf"
+            app:cardBackgroundColor="#FFFF66">
+
+            <TextView
+                android:id="@+id/questionOneText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10sp"
+                android:text="1. How many miles per hour can a Bearded Dragon run?"
+                android:textColor="@color/purple_777"
+                android:textSize="30sp" />
+
+            <EditText
+                android:id="@+id/editTextAnswer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:paddingTop="100sp"
+                android:text="Enter answer"
+                android:textColor="@color/purple_777" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="181dp"
+            android:background="#1fbccf"
+            app:cardBackgroundColor="#FFFF66">
+
+            <TextView
+                android:id="@+id/questionTwoText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10sp"
+                android:text="2. Bearded Dragons can run on two legs."
+                android:textColor="@color/purple_777"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/buttonTrueTwoChicken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="100dp"
+                android:onClick="dragonQuizTrue"
+                android:text="True" />
+
+            <Button
+                android:id="@+id/buttonFalseTwoChicken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="250dp"
+                android:layout_marginTop="100dp"
+                android:onClick="dragonQuizFalse"
+                android:text="False" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="175dp"
+            android:background="#1fbccf"
+            app:cardBackgroundColor="#FFFF66">
+
+            <TextView
+                android:id="@+id/questionThreeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10sp"
+                android:text="3. Bearded Dragons are unable to sleep standing up."
+                android:textColor="@color/purple_777"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/buttonTrueThreeChicken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="100dp"
+                android:onClick="dragonQuizTrue"
+                android:text="True" />
+
+            <Button
+                android:id="@+id/buttonFalseThreeChicken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="250dp"
+                android:layout_marginTop="100dp"
+                android:onClick="dragonQuizFalse"
+                android:text="False" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="195dp"
+            android:background="#1fbccf"
+            app:cardBackgroundColor="#FFFF66">
+
+            <RadioButton
+                android:id="@+id/radioButtonFiveThousand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="300sp"
+                android:layout_marginTop="100sp"
+                android:text="3"
+                android:textColor="@color/purple_777" />
+
+            <RadioButton
+                android:id="@+id/radioButtonTwelve"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="210sp"
+                android:layout_marginTop="100sp"
+                android:onClick="onRadioButtonClicked"
+                android:text="12"
+                android:textColor="@color/purple_777" />
+
+            <RadioButton
+                android:id="@+id/radioButtonThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="110sp"
+                android:layout_marginTop="100sp"
+                android:text="8"
+                android:textColor="@color/purple_777" />
+
+            <RadioButton
+                android:id="@+id/radioButtonOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100sp"
+                android:text="1"
+                android:textColor="@color/purple_777" />
+
+            <TextView
+                android:id="@+id/questionFourText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10sp"
+                android:text="4. How many species of a Bearded Dragon are there?"
+                android:textColor="@color/purple_777"
+                android:textSize="30sp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="194dp"
+            android:background="#1fbccf"
+            app:cardBackgroundColor="#FFFF66">
+
+            <TextView
+                android:id="@+id/questionFiveText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10sp"
+                android:text="Bearded Dragons wave to each other."
+                android:textColor="@color/purple_777"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/buttonTrueFourChicken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="100dp"
+                android:onClick="dragonQuizTrue"
+                android:text="True" />
+
+            <Button
+                android:id="@+id/buttonFalseFourChicken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="250dp"
+                android:layout_marginTop="100dp"
+                android:onClick="dragonQuizFalse"
+                android:text="False" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#1fbccf"
+            app:cardBackgroundColor="#FFFF66">
+
+            <Button
+                android:id="@+id/buttonQuizResults"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:layout_marginTop="20sp"
+                android:onClick="quizResultsDragon"
+                android:text="Submit Quiz" />
+
+            <Button
+                android:id="@+id/homeButtonDragon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="250sp"
+                android:layout_marginTop="25sp"
+                android:onClick="loadHomePageDragon"
+                android:text="Back" />
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>
