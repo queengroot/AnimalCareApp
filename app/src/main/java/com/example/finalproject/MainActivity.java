@@ -5,13 +5,25 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity  {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener, Animation.AnimationListener  {
+
+    Animation animBounce;
+    Animation animLeftRight;
+    Animation animRotateRight;
+    Animation animRotateLeft;
+    ImageView imageView;
+    ImageView imageViewTwo;
+    ImageView imageViewThree;
+    ImageView imageViewFour;
 
     static int correct = 0;
     static int correctChicken = 0;
@@ -88,8 +100,111 @@ public class MainActivity extends AppCompatActivity  {
 
 
 
+
     }
 
+
+    public void loadAnimationsDragon(){
+        animBounce = AnimationUtils.loadAnimation(this, R.anim.bounce);
+        animLeftRight = AnimationUtils.loadAnimation(this, R.anim.left_right);
+    }
+
+    public void loadAnimationsDog(){
+
+        animBounce = AnimationUtils.loadAnimation(this, R.anim.bounce);
+        animLeftRight = AnimationUtils.loadAnimation(this, R.anim.left_right);
+    }
+
+    public void loadAnimationsChicken(){
+
+        animRotateRight = AnimationUtils.loadAnimation(this, R.anim.rotate_right);
+    }
+
+    public void loadAnimationsCat(){
+
+        animRotateLeft = AnimationUtils.loadAnimation(this, R.anim.rotate_left);
+    }
+
+    public void loadUIDragon(){
+
+        imageView = (ImageView) findViewById(R.id.imageView12);
+
+        imageView.setOnClickListener(this);
+
+    }
+
+    public void loadUIDog(){
+        imageViewTwo = (ImageView) findViewById(R.id.imageView11);
+        imageViewTwo.setOnClickListener(this);
+
+    }
+
+    public void loadUIChicken(){
+        imageViewThree = (ImageView) findViewById(R.id.imageView10);
+        imageViewThree.setOnClickListener(this);
+
+    }
+
+    public void loadUICat(){
+        imageViewFour = (ImageView) findViewById(R.id.imageView9);
+        imageViewFour.setOnClickListener(this);
+
+    }
+    @Override
+    public void onAnimationRepeat(Animation animation) {
+
+
+    }
+
+    @Override
+    public void onAnimationEnd(Animation animation) {
+
+
+    }
+
+
+    @Override
+    public void onAnimationStart(Animation animation) {
+
+
+    }
+    @Override
+    public void onClick(View v) {
+
+        switch (v.getId()) {
+
+            case R.id.imageView12:
+                animLeftRight.setDuration(5000);
+                animLeftRight.setAnimationListener(this);
+                imageView.startAnimation(animLeftRight);
+
+                break;
+            case R.id.imageView11:
+                animBounce.setDuration(3000);
+                animBounce.setAnimationListener(this);
+                imageViewTwo.startAnimation(animBounce);
+
+                break;
+
+            case R.id.imageView10:
+                animRotateRight.setDuration(3000);
+                animRotateRight.setAnimationListener(this);
+                imageViewThree.startAnimation(animRotateRight);
+
+                break;
+
+            case R.id.imageView9:
+                animRotateLeft.setDuration(3000);
+                animRotateLeft.setAnimationListener(this);
+                imageViewFour.startAnimation(animRotateLeft);
+
+                break;
+
+
+
+
+        }
+    }
     //methods to switch between layouts
     public void loadHome(View v){
 
@@ -148,20 +263,30 @@ public class MainActivity extends AppCompatActivity  {
     
     public void loadCatSounds(View v){
         setContentView(R.layout.catsounds);
+        loadUICat();
+        loadAnimationsCat();
     }
 
     public void loadChickenSounds(View v){
         setContentView(R.layout.chickensounds);
+        loadUIChicken();
+        loadAnimationsChicken();
     }
 
     public void loadDogSounds(View v){
         setContentView(R.layout.dogsounds);
+        loadUIDog();
+        loadAnimationsDog();
+
     }
 
     public void loadDragonSounds(View v){
         setContentView(R.layout.dragonsounds);
+        loadAnimationsDragon();
+        loadUIDragon();
     }
     public void changeText(View v) {
+
         TextView facts = (TextView)findViewById(R.id.factsView);
 
         facts.setText("" + catFacts[i]);
