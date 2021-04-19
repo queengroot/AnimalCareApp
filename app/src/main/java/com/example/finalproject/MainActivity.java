@@ -3,7 +3,10 @@ package com.example.finalproject;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Color;
+import android.media.MediaPlayer;
+import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -13,8 +16,18 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.media.SoundPool;
+import android.content.res.AssetFileDescriptor;
+import android.content.res.AssetManager;
+import android.media.AudioAttributes;
+import android.media.AudioManager;
+
+import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, Animation.AnimationListener  {
+
+    int catMeow = -1;
+
 
     Animation animBounce;
     Animation animLeftRight;
@@ -98,10 +111,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        });
 
 
-
-
-
     }
+
+    //***************************************************************Sounds*****************************************************************
+    // Instantiate our sound pool dependent upon which version of Android
+
+
+
+
+    //*************************************************************** End of Sounds ***********************************************************
 
 
     public void loadAnimationsDragon(){
@@ -200,6 +218,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 break;
 
+            case R.id.soundOneCat:
+                final MediaPlayer mp = MediaPlayer.create(this, R.raw.meow);
+                mp.start();
+
 
 
 
@@ -265,6 +287,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.catsounds);
         loadUICat();
         loadAnimationsCat();
+
+        //sounds of cats
+        Button catMeow = (Button) findViewById(R.id.soundOneCat);
+
+        catMeow.setOnClickListener(this);
+
     }
 
     public void loadChickenSounds(View v){
