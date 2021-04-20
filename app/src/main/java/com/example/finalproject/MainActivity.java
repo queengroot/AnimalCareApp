@@ -35,6 +35,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     ImageView imageViewThree;
     ImageView imageViewFour;
 
+    //changes made
+
     static int correct = 0;
     static int correctChicken = 0;
     static int correctDog = 0;
