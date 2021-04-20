@@ -26,9 +26,6 @@ import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, Animation.AnimationListener  {
 
-    int catMeow = -1;
-
-
     Animation animBounce;
     Animation animLeftRight;
     Animation animRotateRight;
@@ -44,6 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     static int correctDragon = 0;
     int i = 0;
     int j = 0;
+
     //String[] catFacts = new String[600];
     String[] catFacts = {"A cat can not see directly under their nose.", "Cats can rotate their ears 180 degrees.",
                         "Cats are one of, if not the most, popular pet in the world.",
@@ -218,9 +216,63 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 break;
 
+                //cat noises
             case R.id.soundOneCat:
                 final MediaPlayer mp = MediaPlayer.create(this, R.raw.meow);
                 mp.start();
+                break;
+
+            case R.id.soundTwoCat:
+                final MediaPlayer mpTwo = MediaPlayer.create(this, R.raw.hungrycat);
+                mpTwo.start();
+                break;
+
+            case R.id.soundThreeCat:
+                final MediaPlayer mpThree = MediaPlayer.create(this, R.raw.purr);
+                mpThree.start();
+                break;
+
+                //dog noises
+
+            case R.id.soundDogOne:
+                final MediaPlayer mpFour = MediaPlayer.create(this, R.raw.bark);
+                mpFour.start();
+                break;
+
+            case R.id.soundDogThree:
+                final MediaPlayer mpFive = MediaPlayer.create(this, R.raw.growl);
+
+                mpFive.start();
+                break;
+
+            case R.id.soundDogTwo:
+                final MediaPlayer mpSix = MediaPlayer.create(this, R.raw.howl);
+
+                mpSix.start();
+                break;
+
+                //chicken noises
+            case R.id.chickenSoundOne:
+                final MediaPlayer mpEight = MediaPlayer.create(this, R.raw.cluck);
+                mpEight.start();
+                break;
+
+            case R.id.chickenSoundTwo:
+                final MediaPlayer mpSeven = MediaPlayer.create(this, R.raw.crow);
+                mpSeven.start();
+                break;
+
+            case R.id.chickenSoundThree:
+                final MediaPlayer mpNine = MediaPlayer.create(this, R.raw.babychick);
+                mpNine.start();
+                break;
+
+                //bearded dragon noises
+            case R.id.soundDragonOne:
+                final MediaPlayer mpTen = MediaPlayer.create(this, R.raw.hiss);
+                mpTen.start();
+                break;
+
 
 
 
@@ -290,8 +342,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         //sounds of cats
         Button catMeow = (Button) findViewById(R.id.soundOneCat);
+        Button catHungry = (Button) findViewById(R.id.soundTwoCat);
+        Button catPurr = (Button) findViewById(R.id.soundThreeCat);
+
 
         catMeow.setOnClickListener(this);
+        catHungry.setOnClickListener(this);
+        catPurr.setOnClickListener(this);
 
     }
 
@@ -299,6 +356,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.chickensounds);
         loadUIChicken();
         loadAnimationsChicken();
+
+        Button chickenCluck = (Button) findViewById(R.id.chickenSoundOne);
+        Button chickenCrow = (Button) findViewById(R.id.chickenSoundTwo);
+        Button chickenBaby = (Button) findViewById(R.id.chickenSoundThree);
+
+        chickenCrow.setOnClickListener(this);
+        chickenCluck.setOnClickListener(this);
+        chickenBaby.setOnClickListener(this);
+
     }
 
     public void loadDogSounds(View v){
@@ -306,12 +372,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         loadUIDog();
         loadAnimationsDog();
 
+        Button dogBark = (Button) findViewById(R.id.soundDogOne);
+        Button dogGrowl = (Button) findViewById(R.id.soundDogThree);
+        Button dogHowl = (Button) findViewById(R.id.soundDogTwo);
+
+        dogBark.setOnClickListener(this);
+        dogGrowl.setOnClickListener(this);
+        dogHowl.setOnClickListener(this);
+
+
+
     }
 
     public void loadDragonSounds(View v){
         setContentView(R.layout.dragonsounds);
         loadAnimationsDragon();
         loadUIDragon();
+
+        Button dragonHiss = (Button) findViewById(R.id.soundDragonOne);
+        dragonHiss.setOnClickListener(this);
+
     }
     public void changeText(View v) {
 

@@ -12,12 +12,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="45dp"
         android:fontFamily="@font/quicksand_medium"
         android:text="The Sounds of Bearded Dragons"
         android:textColor="@color/purple_777"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView12"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -25,38 +23,48 @@
         android:id="@+id/imageView12"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="65dp"
-        android:layout_marginEnd="65dp"
-        android:layout_marginBottom="94dp"
-        app:layout_constraintBottom_toTopOf="@+id/soundDragonOne"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="423dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/soundsOfDragons"
+        app:layout_constraintStart_toEndOf="@+id/soundDragonOne"
+        app:layout_constraintTop_toTopOf="@+id/soundsOfDragons"
         app:srcCompat="@drawable/dragoncute" />
 
     <Button
         android:id="@+id/homeButtonDragonSounds"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="25dp"
+        android:layout_marginStart="102dp"
+        android:layout_marginBottom="56dp"
         android:onClick="loadHomePageDragon"
         android:text="Home"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/soundDragonOne" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/soundDragonOne"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="140dp"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginEnd="233dp"
         android:fontFamily="@font/quicksand_medium"
         android:text="Hiss"
         android:textSize="25sp"
-        app:layout_constraintBottom_toTopOf="@+id/homeButtonDragonSounds"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView12"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView12" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="166dp"
+        android:layout_marginEnd="165dp"
+        android:layout_marginBottom="29dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/homeButtonDragonSounds"
+        app:srcCompat="@drawable/dragoncute" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1fbccf"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="93dp"
+            app:cardBackgroundColor="#FFFF66">
+
+            <TextView
+                android:id="@+id/titleKnowledge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/quicksand_medium"
+                android:paddingLeft="25sp"
+                android:text="Test your knowledge!"
+                android:textColor="@color/purple_777"
+                android:textSize="36sp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="193dp"
+            android:background="#1fbccf"
+            app:cardBackgroundColor="#FFFF66">
+
+            <TextView
+                android:id="@+id/questionOneText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10sp"
+                android:text="1. What breed is Scooby Doo?"
+                android:textColor="@color/purple_777"
+                android:textSize="30sp" />
+
+            <EditText
+                android:id="@+id/editTextAnswer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:paddingTop="100sp"
+                android:text="Enter answer"
+                android:textColor="@color/purple_777" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="181dp"
+            android:background="#1fbccf"
+            app:cardBackgroundColor="#FFFF66">
+
+            <TextView
+                android:id="@+id/questionTwoText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10sp"
+                android:text="2. The Chow chow dog breed has a black tongue."
+                android:textColor="@color/purple_777"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/buttonTrueTwoChicken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="100dp"
+                android:onClick="dogQuizTrue"
+                android:text="True" />
+
+            <Button
+                android:id="@+id/buttonFalseTwoChicken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="250dp"
+                android:layout_marginTop="100dp"
+                android:onClick="dogQuizFalse"
+                android:text="False" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="#1fbccf"
+            app:cardBackgroundColor="#FFFF66">
+
+            <TextView
+                android:id="@+id/questionThreeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10sp"
+                android:text="3. The Chihuahua is the smallest dog breed."
+                android:textColor="@color/purple_777"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/buttonTrueThreeChicken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="100dp"
+                android:onClick="dogQuizTrue"
+                android:text="True" />
+
+            <Button
+                android:id="@+id/buttonFalseThreeChicken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="250dp"
+                android:layout_marginTop="100dp"
+                android:onClick="dogQuizFalse"
+                android:text="False" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="195dp"
+            android:background="#1fbccf"
+            app:cardBackgroundColor="#FFFF66">
+
+            <RadioButton
+                android:id="@+id/radioButtonFiveThousand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="300sp"
+                android:layout_marginTop="100sp"
+                android:text="Depression"
+                android:textColor="@color/purple_777" />
+
+            <RadioButton
+                android:id="@+id/radioButtonTwelve"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="210sp"
+                android:layout_marginTop="100sp"
+                android:onClick="onRadioButtonClicked"
+                android:text="Obesity"
+                android:textColor="@color/purple_777" />
+
+            <RadioButton
+                android:id="@+id/radioButtonThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="110sp"
+                android:layout_marginTop="100sp"
+                android:text="Anxiety"
+                android:textColor="@color/purple_777" />
+
+            <RadioButton
+                android:id="@+id/radioButtonOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100sp"
+                android:text="Arthritis"
+                android:textColor="@color/purple_777" />
+
+            <TextView
+                android:id="@+id/questionFourText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10sp"
+                android:text="4. Which medical condition affects dogs the most?"
+                android:textColor="@color/purple_777"
+                android:textSize="30sp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="208dp"
+            android:background="#1fbccf"
+            app:cardBackgroundColor="#FFFF66">
+
+            <TextView
+                android:id="@+id/questionFiveText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10sp"
+                android:paddingBottom="20sp"
+                android:text="5. The French bulldog is considered the heaviest dog breed. "
+                android:textColor="@color/purple_777"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/buttonTrueFourChicken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="150dp"
+                android:onClick="dogQuizTrue"
+                android:text="True" />
+
+            <Button
+                android:id="@+id/buttonFalseFourChicken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="250dp"
+                android:layout_marginTop="150dp"
+                android:onClick="dogQuizFalse"
+                android:text="False" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#1fbccf"
+            app:cardBackgroundColor="#FFFF66">
+
+            <Button
+                android:id="@+id/buttonQuizResults"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:layout_marginTop="20sp"
+                android:onClick="quizResultsDog"
+                android:text="Submit Quiz" />
+
+            <Button
+                android:id="@+id/homeButtonDog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="250sp"
+                android:layout_marginTop="25sp"
+                android:onClick="loadHomePageDog"
+                android:text="Back" />
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>
