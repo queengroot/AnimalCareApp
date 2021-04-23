@@ -332,6 +332,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
+    public void loadFoodCat(View v){
+        setContentView(R.layout.cat_dos_donts);
+    }
+
     public void loadCatQuiz(View v){
 
         setContentView(R.layout.cat_quiz);
@@ -565,6 +569,10 @@ public void loadChickenPictures(View v){
 
     }
 
+    public void loadFoodChicken(View v){
+        setContentView(R.layout.chickens_dos_donts);
+    }
+
     public void loadChickenQuiz(View v){
 
         setContentView(R.layout.chicken_quiz);
@@ -696,6 +704,10 @@ public void loadChickenPictures(View v){
         //This is the chicken page
         setContentView(R.layout.dog_facts);
 
+    }
+
+    public void loadFoodDog(View v){
+        setContentView(R.layout.dog_dos_donts);
     }
 
     public void loadDogQuiz(View v){
@@ -833,6 +845,10 @@ public void loadChickenPictures(View v){
     public void loadDragonQuiz(View v){
 
         setContentView(R.layout.dragon_quiz);
+    }
+
+    public void loadFoodDragon(View v){
+        setContentView(R.layout.dragon_dos_donts);
     }
 
     public void changeTextDragon(View v) {

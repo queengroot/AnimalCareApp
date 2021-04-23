@@ -10,28 +10,28 @@
         android:id="@+id/homepageChickenTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="34dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/quicksand_medium"
         android:text="Chickens"
         android:textColor="#800080"
         android:textSize="50sp"
-        app:layout_constraintStart_toEndOf="@+id/homepageChickenPics"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/homepageChickenFacts"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="34dp"
-        android:layout_marginBottom="44dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="19dp"
         android:fontFamily="@font/quicksand_medium"
         android:onClick="loadChickenFacts"
         android:text="Facts"
         android:textColor="#FFFDFD"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toStartOf="@+id/button" />
+        app:layout_constraintStart_toStartOf="@+id/homepageChickenPics" />
 
     <Button
         android:id="@+id/homepageChickenCare"
@@ -40,7 +40,8 @@
         android:layout_marginStart="35dp"
         android:layout_marginBottom="7dp"
         android:fontFamily="@font/quicksand_medium"
-        android:text="Care"
+        android:onClick="loadFoodChicken"
+        android:text="Food"
         android:textColor="#FBF5F5"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/button"
@@ -50,14 +51,15 @@
         android:id="@+id/homepageChickenPics"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="41dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="34dp"
         android:fontFamily="@font/quicksand_medium"
         android:onClick="loadChickenPictures"
         android:text="Pics"
         android:textColor="@color/white"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/homepageChickenFacts"
-        app:layout_constraintEnd_toEndOf="@+id/homepageChickenFacts" />
+        app:layout_constraintEnd_toStartOf="@+id/homepageChickenTitle"
+        app:layout_constraintTop_toBottomOf="@+id/homepageChickenTitle" />
 
     <Button
         android:id="@+id/homepageChickenQuiz"
@@ -87,12 +89,14 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="263dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginEnd="35dp"
         android:layout_marginBottom="16dp"
         android:fontFamily="@font/quicksand_medium"
         android:onClick="loadChickenSounds"
         android:text="Sounds"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/homepageChickenQuiz"
+        app:layout_constraintStart_toEndOf="@+id/homepageChickenPics" />
 </androidx.constraintlayout.widget.ConstraintLayout>
