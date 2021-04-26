@@ -10,8 +10,8 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="23dp"
         android:fontFamily="@font/quicksand_medium"
         android:text="The Sounds of Chickens"
         android:textColor="@color/purple_777"
@@ -23,56 +23,58 @@
         android:id="@+id/imageView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="37dp"
-        android:layout_marginBottom="36dp"
-        app:layout_constraintBottom_toTopOf="@+id/chickenSoundThree"
-        app:layout_constraintStart_toStartOf="@+id/chickenSoundOne"
+        android:layout_marginTop="231dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/chickencute" />
 
     <Button
         android:id="@+id/soundHomeButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="27dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="40dp"
         android:fontFamily="@font/quicksand_medium"
         android:onClick="loadHomePageChicken"
         android:text="Back"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/chickenSoundTwo" />
 
     <Button
         android:id="@+id/chickenSoundOne"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginBottom="260dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginBottom="66dp"
         android:fontFamily="@font/quicksand_medium"
         android:text="Cluck"
         android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/chickenSoundTwo"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/chickenSoundThree"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="53dp"
+        android:layout_marginBottom="297dp"
         android:fontFamily="@font/quicksand_medium"
         android:text="Baby Chick"
         android:textSize="25sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/chickenSoundOne"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/chickenSoundTwo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="43dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="12dp"
         android:fontFamily="@font/quicksand_medium"
         android:text="Crow"
         android:textSize="25sp"
-        app:layout_constraintStart_toEndOf="@+id/chickenSoundOne"
+        app:layout_constraintEnd_toStartOf="@+id/chickenSoundThree"
         app:layout_constraintTop_toBottomOf="@+id/chickenSoundThree" />
 </androidx.constraintlayout.widget.ConstraintLayout>

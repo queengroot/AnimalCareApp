@@ -23,12 +23,15 @@
         android:id="@+id/factsDogView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="167dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="142dp"
         android:gravity="center"
         android:text="German Shepherds are protective of their loved ones."
+        android:textAlignment="center"
         android:textColor="@color/purple_777"
         android:textSize="30sp"
+        app:flow_horizontalAlign="center"
+        app:flow_verticalAlign="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -36,21 +39,21 @@
         android:id="@+id/nextFact"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
+        android:layout_marginBottom="15dp"
         android:onClick="changeTextDog"
         android:text="Next Fact"
+        app:layout_constraintBottom_toTopOf="@+id/backDogHomePage"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/factsDogView" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/backDogHomePage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="14dp"
+        android:layout_marginEnd="12dp"
         android:layout_marginBottom="16dp"
         android:onClick="loadHomePageDog"
         android:text="Back"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/nextFact" />
+        app:layout_constraintEnd_toEndOf="@+id/nextFact" />
 </androidx.constraintlayout.widget.ConstraintLayout>

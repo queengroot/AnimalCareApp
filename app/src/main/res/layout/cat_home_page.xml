@@ -10,53 +10,55 @@
         android:id="@+id/homepageCatTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:fontFamily="@font/quicksand_medium"
         android:text="Cats"
         android:textColor="#800080"
         android:textSize="50sp"
-        app:layout_constraintEnd_toStartOf="@+id/homepageCatCare"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/homepageCatFacts"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="21dp"
+        android:layout_marginStart="24dp"
         android:fontFamily="@font/quicksand_medium"
         android:onClick="loadCatFacts"
         android:text="Facts"
         android:textColor="#FFFDFD"
         android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="@+id/homepageCatCare"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/homepageCatCare" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/homepageCatCare"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/homepageCatCare"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="139dp"
-        android:layout_marginEnd="33dp"
+        android:layout_marginTop="87dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="88dp"
         android:fontFamily="@font/quicksand_medium"
         android:onClick="loadFoodCat"
         android:text="Foods"
         android:textColor="#FBF5F5"
         android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/homepageCatPics"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/homepageCatTitle" />
 
     <Button
         android:id="@+id/homepageCatPics"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="303dp"
-        android:layout_marginEnd="47dp"
+        android:layout_marginEnd="60dp"
         android:fontFamily="@font/quicksand_medium"
         android:onClick="loadCatPictures"
         android:text="Pics"
         android:textColor="@color/white"
         android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -64,21 +66,21 @@
         android:id="@+id/homepageCatQuiz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="21dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="68dp"
         android:fontFamily="@font/quicksand_medium"
         android:onClick="loadCatQuiz"
         android:text="Quiz"
         android:textColor="@color/white"
         android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="@+id/homepageCatPics"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/homepageCatPics" />
+        app:layout_constraintBottom_toTopOf="@+id/soundButton"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/homepageCatHome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="27dp"
+        android:layout_marginBottom="32dp"
         android:onClick="loadHome"
         android:text="Home"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -89,12 +91,12 @@
         android:id="@+id/soundButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="63dp"
         android:fontFamily="@font/quicksand_medium"
         android:onClick="loadCatSounds"
         android:text="Sounds"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/homepageCatQuiz" />
+        app:layout_constraintTop_toBottomOf="@+id/homepageCatPics" />
 </androidx.constraintlayout.widget.ConstraintLayout>

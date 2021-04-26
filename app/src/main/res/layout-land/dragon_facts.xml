@@ -23,14 +23,15 @@
         android:id="@+id/factsDragonView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="146dp"
-        android:layout_marginBottom="63dp"
+        android:layout_marginTop="48dp"
         android:gravity="center"
         android:text="Bearded Dragons are great fun."
+        android:textAlignment="center"
         android:textColor="@color/purple_777"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/nextFact"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/factTitle" />
 
     <Button
         android:id="@+id/nextFact"

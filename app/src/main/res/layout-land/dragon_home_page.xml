@@ -11,12 +11,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="17dp"
         android:fontFamily="@font/quicksand_medium"
         android:text="Bearded Dragon"
         android:textColor="@color/purple_777"
         android:textSize="45sp"
-        app:layout_constraintEnd_toEndOf="@+id/homepageDragonFacts"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
@@ -24,49 +24,48 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginEnd="13dp"
         android:fontFamily="@font/amaranth"
         android:onClick="loadDragonFacts"
         android:text="Facts"
         android:textColor="#FFFDFD"
         android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="@+id/homepageBeardedDragonQuiz"
+        app:layout_constraintEnd_toEndOf="@+id/homepageDogTitle"
         app:layout_constraintTop_toBottomOf="@+id/homepageDogTitle" />
 
     <Button
         android:id="@+id/homepageBeardedDragonCare"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
         android:layout_marginTop="40dp"
         android:fontFamily="@font/amaranth"
         android:onClick="loadFoodDragon"
         android:text="Food"
         android:textColor="#FBF5F5"
         android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="@+id/homepageBeardedDragonHome"
+        app:layout_constraintEnd_toStartOf="@+id/homepageDogTitle"
+        app:layout_constraintStart_toStartOf="@+id/homepageDogTitle"
         app:layout_constraintTop_toBottomOf="@+id/homepageDogTitle" />
 
     <Button
         android:id="@+id/homepageBeardedDragonPics"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="67dp"
-        android:layout_marginBottom="7dp"
         android:fontFamily="@font/amaranth"
         android:onClick="loadDragonPictures"
         android:text="Pics"
         android:textColor="@color/white"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/soundButtonDragon"
-        app:layout_constraintEnd_toStartOf="@+id/soundButtonDragon" />
+        app:layout_constraintBottom_toBottomOf="@+id/homepageBeardedDragonQuiz"
+        app:layout_constraintStart_toStartOf="@+id/homepageBeardedDragonCare"
+        app:layout_constraintTop_toTopOf="@+id/homepageBeardedDragonQuiz" />
 
     <Button
         android:id="@+id/homepageBeardedDragonQuiz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="37dp"
         android:fontFamily="@font/amaranth"
         android:onClick="loadDragonQuiz"
         android:text="Quiz"
@@ -90,11 +89,11 @@
         android:id="@+id/soundButtonDragon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="38dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="43dp"
         android:onClick="loadDragonSounds"
         android:text="Sounds"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/homepageBeardedDragonPics" />
 </androidx.constraintlayout.widget.ConstraintLayout>

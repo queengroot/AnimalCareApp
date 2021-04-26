@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="252dp"
         android:gravity="center"
-        android:text="Test a fact about a chicken here. "
+        android:text="Chickens are great pets for small kids!"
         android:textColor="@color/purple_777"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"

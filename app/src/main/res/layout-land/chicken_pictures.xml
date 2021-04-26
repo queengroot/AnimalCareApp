@@ -25,8 +25,8 @@
 
             <ImageView
                 android:id="@+id/imageView3"
-                android:layout_width="wrap_content"
-                android:layout_height="399dp"
+                android:layout_width="match_parent"
+                android:layout_height="474dp"
                 android:background="#FFFF66"
                 android:onClick="loadHomePageChicken"
                 android:paddingTop="70sp"
@@ -40,8 +40,8 @@
 
             <ImageView
                 android:id="@+id/imageView2"
-                android:layout_width="wrap_content"
-                android:layout_height="456dp"
+                android:layout_width="955dp"
+                android:layout_height="wrap_content"
                 android:background="#FFFF66"
                 app:srcCompat="@drawable/goldencometchicken" />
         </androidx.cardview.widget.CardView>
@@ -52,7 +52,7 @@
 
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="wrap_content"
+                android:layout_width="883dp"
                 android:layout_height="311dp"
                 android:background="#FFFF66"
                 app:srcCompat="@drawable/polishchicken" />
