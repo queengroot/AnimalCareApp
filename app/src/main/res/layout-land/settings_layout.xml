@@ -4,20 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffff66"
-    android:onClick="loadHome">
-
-    <Button
-        android:id="@+id/button14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="62dp"
-        android:layout_marginBottom="14dp"
-        android:fontFamily="@font/quicksand_medium"
-        android:onClick="loadHome"
-        android:text="Home"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/imageView18" />
+    android:background="#ffff66">
 
     <TextView
         android:id="@+id/textView22"
@@ -27,40 +14,51 @@
         android:fontFamily="@font/quicksand_medium"
         android:text="Settings"
         android:textColor="#800080"
-        android:textSize="45dp"
+        android:textSize="45sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/button15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="150dp"
+        android:onClick="changeBooleanTrue"
+        android:text="Sound On"
+        app:layout_constraintEnd_toEndOf="@+id/imageView18"
+        app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+    <Button
+        android:id="@+id/button16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="149dp"
+        android:layout_marginBottom="25dp"
+        android:onClick="changeBooleanFalse"
+        android:text="Sound Off"
+        app:layout_constraintBottom_toTopOf="@+id/imageView18"
+        app:layout_constraintStart_toStartOf="@+id/textView22" />
+
     <ImageView
         android:id="@+id/imageView18"
-        android:layout_width="215dp"
-        android:layout_height="82dp"
-        android:layout_marginTop="42dp"
+        android:layout_width="190dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button17"
+        app:layout_constraintTop_toBottomOf="@+id/button15"
         app:srcCompat="@drawable/sound" />
 
     <Button
         android:id="@+id/button17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="15dp"
-        android:onClick="changeBooleanTrueTwo"
-        android:text="Sound On"
-        app:layout_constraintEnd_toStartOf="@+id/textView22"
-        app:layout_constraintTop_toBottomOf="@+id/textView22" />
-
-    <Button
-        android:id="@+id/button18"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="145dp"
-        android:layout_marginTop="30dp"
-        android:onClick="changeBooleanFalseTwo"
-        android:text="Sound Off"
-        app:layout_constraintStart_toStartOf="@+id/textView22"
-        app:layout_constraintTop_toBottomOf="@+id/textView22" />
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="43dp"
+        android:onClick="loadHome"
+        android:text="Home"
+        app:layout_constraintStart_toStartOf="@+id/imageView18"
+        app:layout_constraintTop_toBottomOf="@+id/imageView18" />
 </androidx.constraintlayout.widget.ConstraintLayout>

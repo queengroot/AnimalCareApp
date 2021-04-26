@@ -50,6 +50,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     ImageView imageViewThree;
     ImageView imageViewFour;
 
+    String testColor = "";
+
 
     static int correct = 0;
     static int correctChicken = 0;
@@ -125,28 +127,48 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     //Sound On and Sound Off buttons to change the boolearn value, which is then stored
     public void changeBooleanTrue(View v){
         Button sound = (Button) findViewById(R.id.button15);
+        Button soundFalse = (Button) findViewById(R.id.button16);
+
+        sound.setBackgroundColor(Color.parseColor("#CBC3E3"));
+        soundFalse.setBackgroundColor(Color.parseColor("#FF6200EE"));
+
         soundOnOff = true;
 
         //save the data
         SharedPreferences.Editor editor = getSharedPreferences("Final Project", MODE_PRIVATE).edit();
+
+        if (soundOnOff == true){
+            editor.putString("color", "#CBC3E3");
+        }
+
         editor.putBoolean("sound", true);
         editor.commit();
     }
 
-    //Sound On and Sound Off buttons to change the boolearn value, which is then stored
-    public void changeBooleanTrueTwo(View v){
-        Button sound = (Button) findViewById(R.id.button17);
-        soundOnOff = true;
-
-        //save the data
-        SharedPreferences.Editor editor = getSharedPreferences("Final Project", MODE_PRIVATE).edit();
-        editor.putBoolean("sound", true);
-        editor.commit();
-    }
+//    //Sound On and Sound Off buttons to change the boolearn value, which is then stored
+//    public void changeBooleanTrueTwo(View v){
+//        Button sound = (Button) findViewById(R.id.button17);
+//
+//
+//        sound.setBackgroundColor(Color.parseColor("#CBC3E3"));
+//
+//
+//        soundOnOff = true;
+//
+//        //save the data
+//        SharedPreferences.Editor editor = getSharedPreferences("Final Project", MODE_PRIVATE).edit();
+//        editor.putBoolean("sound", true);
+//        editor.commit();
+//    }
 
     //Sound On and Sound Off buttons to change the boolearn value, which is then stored
     public void changeBooleanFalse(View v){
         soundOnOff = false;
+        Button sound = (Button) findViewById(R.id.button16);
+        Button soundTrue = (Button) findViewById(R.id.button15);
+
+        sound.setBackgroundColor(Color.parseColor("#CBC3E3"));
+        soundTrue.setBackgroundColor(Color.parseColor("#FF6200EE"));
 
         SharedPreferences.Editor editor = getSharedPreferences("Final Project", MODE_PRIVATE).edit();
         editor.putBoolean("sound", false);
@@ -156,16 +178,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     //Sound On and Sound Off buttons to change the boolearn value, which is then stored
-    public void changeBooleanFalseTwo(View v){
-        Button sound = (Button) findViewById(R.id.button18);
-        soundOnOff = false;
-
-        SharedPreferences.Editor editor = getSharedPreferences("Final Project", MODE_PRIVATE).edit();
-        editor.putBoolean("sound", false);
-        editor.commit();
-        //save the data
-
-    }
+//    public void changeBooleanFalseTwo(View v){
+//        Button sound = (Button) findViewById(R.id.button18);
+//        soundOnOff = false;
+//
+//        SharedPreferences.Editor editor = getSharedPreferences("Final Project", MODE_PRIVATE).edit();
+//        editor.putBoolean("sound", false);
+//        editor.commit();
+//        //save the data
+//
+//    }
 
     //These are loading animations for the various animations
     public void loadAnimationsDragon(){
@@ -425,6 +447,45 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         //settings layout
         setContentView(R.layout.settings_layout);
+
+        //based on the boolean, change the background color of the buttons
+        if (soundOnOff == true){
+
+            Button buttonOn = findViewById(R.id.button15);
+            Button buttonOff = findViewById(R.id.button16);
+
+            buttonOff.setBackgroundColor(Color.parseColor("#FF6200EE"));
+            buttonOn.setBackgroundColor(Color.parseColor("#CBC3E3"));
+        }
+        else
+        {
+            Button buttonOn = findViewById(R.id.button15);
+            Button buttonOff = findViewById(R.id.button16);
+
+            buttonOff.setBackgroundColor(Color.parseColor("#CBC3E3"));
+            buttonOn.setBackgroundColor(Color.parseColor("#FF6200EE"));
+
+        }
+
+        //based on the boolean, change the background color of the buttons
+//        if (soundOnOff == true){
+//
+//            Button buttonOn = findViewById(R.id.button17);
+//            Button buttonOff = findViewById(R.id.button18);
+//
+//            buttonOff.setBackgroundColor(Color.parseColor("#FF6200EE"));
+//            buttonOn.setBackgroundColor(Color.parseColor("#CBC3E3"));
+//        }
+//        else
+//        {
+//            Button buttonOn = findViewById(R.id.button17);
+//            Button buttonOff = findViewById(R.id.button18);
+//
+//            buttonOff.setBackgroundColor(Color.parseColor("#CBC3E3"));
+//            buttonOn.setBackgroundColor(Color.parseColor("#FF6200EE"));
+//
+//        }
+
     }
 
     public void loadHomePageCats(View v){
