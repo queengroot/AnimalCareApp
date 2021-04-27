@@ -117,12 +117,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         SharedPreferences sharedPrefs = getSharedPreferences("Final Project", MODE_PRIVATE);
         soundOnOff = sharedPrefs.getBoolean("sound", true);
 
-
         }
-
-
-
-
 
     //Sound On and Sound Off buttons to change the boolearn value, which is then stored
     public void changeBooleanTrue(View v){
@@ -145,21 +140,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         editor.commit();
     }
 
-//    //Sound On and Sound Off buttons to change the boolearn value, which is then stored
-//    public void changeBooleanTrueTwo(View v){
-//        Button sound = (Button) findViewById(R.id.button17);
-//
-//
-//        sound.setBackgroundColor(Color.parseColor("#CBC3E3"));
-//
-//
-//        soundOnOff = true;
-//
-//        //save the data
-//        SharedPreferences.Editor editor = getSharedPreferences("Final Project", MODE_PRIVATE).edit();
-//        editor.putBoolean("sound", true);
-//        editor.commit();
-//    }
 
     //Sound On and Sound Off buttons to change the boolearn value, which is then stored
     public void changeBooleanFalse(View v){
@@ -177,17 +157,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
-    //Sound On and Sound Off buttons to change the boolearn value, which is then stored
-//    public void changeBooleanFalseTwo(View v){
-//        Button sound = (Button) findViewById(R.id.button18);
-//        soundOnOff = false;
-//
-//        SharedPreferences.Editor editor = getSharedPreferences("Final Project", MODE_PRIVATE).edit();
-//        editor.putBoolean("sound", false);
-//        editor.commit();
-//        //save the data
-//
-//    }
 
     //These are loading animations for the various animations
     public void loadAnimationsDragon(){
@@ -267,7 +236,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         switch (v.getId()) {
 
-
+            //if this id, do an animation/sound effect
             case R.id.imageView12:
                 animLeftRight.setDuration(5000);
                 animLeftRight.setAnimationListener(this);
@@ -427,20 +396,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 mpTen.start();
                 break;
-
-
         }
-
-
     }
-
 
     //methods to switch between layouts
     public void loadHome(View v){
-
         //Back to main menu page
         setContentView(R.layout.activity_main);
-
     }
 
     public void loadSettings (View v){
@@ -466,25 +428,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             buttonOn.setBackgroundColor(Color.parseColor("#FF6200EE"));
 
         }
-
-        //based on the boolean, change the background color of the buttons
-//        if (soundOnOff == true){
-//
-//            Button buttonOn = findViewById(R.id.button17);
-//            Button buttonOff = findViewById(R.id.button18);
-//
-//            buttonOff.setBackgroundColor(Color.parseColor("#FF6200EE"));
-//            buttonOn.setBackgroundColor(Color.parseColor("#CBC3E3"));
-//        }
-//        else
-//        {
-//            Button buttonOn = findViewById(R.id.button17);
-//            Button buttonOff = findViewById(R.id.button18);
-//
-//            buttonOff.setBackgroundColor(Color.parseColor("#CBC3E3"));
-//            buttonOn.setBackgroundColor(Color.parseColor("#FF6200EE"));
-//
-//        }
 
     }
 
@@ -705,7 +648,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
         }
 
-
     }
 
 // ***************End of cat stuff *****************************************************************
@@ -726,7 +668,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         chickenBaby.setOnClickListener(this);
 
     }
-
 
 public void loadChickenPictures(View v){
 
@@ -785,12 +726,9 @@ public void loadChickenPictures(View v){
                 v.setBackgroundColor(Color.parseColor("#FF03DAC5"));
                 correctChicken++;
                 break;
-
         }
 
-
     }
-
     public void chickenQuizFalse(View v)
     {
 
@@ -877,6 +815,7 @@ public void loadChickenPictures(View v){
 
     }
 
+    //load the dog sounds
     public void loadDogSounds(View v){
         setContentView(R.layout.dogsounds);
         loadUIDog();
@@ -889,7 +828,6 @@ public void loadChickenPictures(View v){
         dogBark.setOnClickListener(this);
         dogGrowl.setOnClickListener(this);
         dogHowl.setOnClickListener(this);
-
 
 
     }
